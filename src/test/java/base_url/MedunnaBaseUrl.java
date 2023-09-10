@@ -9,6 +9,7 @@ import static utilities.AuthenticationMedunna.generateToken;
 public class MedunnaBaseUrl {
 
     public static RequestSpecification spec;
+    //Restassured kutuphaneleri eklenmesi lazim
 
     //Testi calistrdigimizda spec objesinin null gelmemesi icin setup() methodunun calistirilmasi gerekir.
     //Cucumber' da her testten once calistirmak istedigimiz methodlari Hooks class' i icesine ekleriz

@@ -6,8 +6,18 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+//bunun import'u cucumberdan degil jackson annotation'dan yapmamiz gerekiyor.
 
 public class RoomPojo implements Serializable {
+
+	//pojo class sag tik new generate pojo class json ile olusturulur
+	//icine body yapistirilir
+	//isim verilir
+	//suffic kismina ise pojo yazilir
+	//bos ve dolu constructer'lar eklenir
+	//jsonproperties ignore eklenir. ust tarftaki eklenti
+	//eger sorun olursa import kismi duzenlenecek.
+
 	private int roomNumber;
 	private String roomType;
 	private boolean status;

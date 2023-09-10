@@ -36,14 +36,21 @@ public class ApiRoomStepDef {
 
         // Set the expected data
         expectedData = new RoomPojo(odaNo, "SUITE", true, 123.00, "End To End Test için oluşturulmuştur");
+        System.out.println(expectedData);
 
         // Send the request and get the response
         response = given(spec).when().get("{first}/{second}/{third}");
+        //parentez icine kac tane parametre varsa eklenir.
 
     }
 
     @Then("Body dogrulanir")
     public void body_dogrulanir() throws JsonProcessingException {
+
+        //objectMapper jackson databind olandan secilir
+        //redvalue da exception firlatilacak
+        //ve daha sonra assertion'lar yazilacak
+
         RoomPojo actualData = new ObjectMapper().readValue(response.asString(), RoomPojo.class);
         assertEquals(200, response.statusCode());
         assertEquals(expectedData.getRoomNumber(), actualData.getRoomNumber());

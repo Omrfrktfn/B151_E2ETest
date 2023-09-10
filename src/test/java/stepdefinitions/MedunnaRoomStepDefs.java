@@ -14,6 +14,9 @@ public class MedunnaRoomStepDefs {
     public static int odaNo;
     public static String odaId;
 
+    //static olmasini sebebi her yerde kullanmak icin
+
+
     @When("Items&Titles secenegine tiklanir")
     public void ıtems_titles_secenegine_tiklanir() {
         medunnaHomePage.itemsdAndTitles.click();
